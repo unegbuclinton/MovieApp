@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { DPIconMicrophone, DPIconSearch } from '../../gallery/icons';
 import { Container, InputField, InputFieldIcon } from './styles';
 
