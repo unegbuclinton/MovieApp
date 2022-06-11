@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import BodyLayout from './components/layout/BodyLayout/BodyLayout';
+import AlsoScreening from './components/molecules/AlsoScreen';
+import HotMovies from './components/molecules/HotMovies';
+import Navbar from './components/molecules/Navbar';
+import { default as TopBarComponent } from './components/molecules/TopBarSection';
+import HomePage from './components/pages/HomePage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HomePage />
     </div>
   );
 }
