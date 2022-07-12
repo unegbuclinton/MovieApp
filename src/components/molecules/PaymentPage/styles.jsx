@@ -85,6 +85,8 @@ export const PaymentImage = styled.img`
 `;
 
 export const PaymentCTA = styled.div`
+  display: flex;
+  justify-content: center;
   .payment-btn {
     width: 27.7rem;
     height: 5rem;

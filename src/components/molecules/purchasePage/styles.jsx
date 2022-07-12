@@ -13,6 +13,7 @@ export const PurchaseDropdown = styled.div`
 
   .purchase-input {
     height: 2.4rem;
+    width: 100%;
   }
 `;
 
