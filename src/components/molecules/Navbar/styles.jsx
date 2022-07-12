@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { COLORS } from '../../../constatnts/colors';
-import { FONTSIZES } from '../../../constatnts/font-size';
 
 export const NavbarWrapper = styled.div`
   background-color: ${COLORS.xiketic};
