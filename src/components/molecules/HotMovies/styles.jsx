@@ -12,7 +12,7 @@ export const HotMoviesWrapper = styled.div`
 export const HotMoviesCarousel = styled.div`
   display: flex;
   gap: 1rem;
-  height: 100%;
+  height: 26.8rem;
   width: 100%;
   overflow-x: scroll;
   /* scroll-snap-type: x mandatory; */
@@ -20,12 +20,12 @@ export const HotMoviesCarousel = styled.div`
 
   .carousel-item {
     width: 11.3rem;
-    height: 18.8rem;
+    height: 15.8rem;
     display: flex;
     flex-direction: column;
     flex: 1 0 35%;
     border-radius: 0.556rem;
-    margin-left: 1.6rem;
+    margin: 0 1.6rem;
     scroll-snap-align: start;
 
     &__img {
@@ -47,7 +47,7 @@ export const HotMoviesText = styled.h1`
   color: ${COLORS.white};
   font-size: ${FONTSIZES.small};
   font-weight: ${FONTWEIGHTS.medium};
-  margin-left: 0.8rem;
+  margin-left: 1.8rem;
   margin-top: 0.8rem;
 `;
 // export const HotMoviesParagraph = styled.p`

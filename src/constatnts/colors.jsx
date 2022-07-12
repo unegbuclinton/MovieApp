@@ -5,4 +5,6 @@ export const COLORS = {
   amethyst: '#9067C6',
   'grey-200': '#626262',
   'grey-600': '#bebebe',
+  'cancel-red': '#FE0606',
+  'border-line': '#281F1F',
 };

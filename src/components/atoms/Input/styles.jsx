@@ -10,7 +10,7 @@ export const InputField = styled.input`
   background-color: ${COLORS['xiketic-200']};
   color: ${COLORS.white};
   padding: 20px;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 `;
 export const Container = styled.div`
   position: relative;

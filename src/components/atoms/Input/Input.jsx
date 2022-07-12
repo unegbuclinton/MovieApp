@@ -13,6 +13,7 @@ const Input = ({
   className,
   containerClass,
   value,
+  search,
   onWheel,
 }) => {
   //   const [show, setShow] = useState(false);
@@ -25,6 +26,7 @@ const Input = ({
         onWheel={onWheel}
         disabled={disabled}
         name={name}
+        type={type}
         id={id}
         // type={type === 'password' ? (show ? 'text' : 'password') : type}
         placeholder={placeholder}
@@ -37,10 +39,12 @@ const Input = ({
           {show ? <DPIconSkraggleEyeOpen /> : <DPIconSkraggleEyeClose />}
         </InputFieldIcon>
       )} */}
-      <InputFieldIcon>
-        <DPIconMicrophone className="microphone" />
-        <DPIconSearch className="search" />
-      </InputFieldIcon>
+      {search && (
+        <InputFieldIcon>
+          <DPIconMicrophone className="microphone" />
+          <DPIconSearch className="search" />
+        </InputFieldIcon>
+      )}
     </Container>
   );
 };

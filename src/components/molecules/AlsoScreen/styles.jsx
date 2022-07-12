@@ -10,6 +10,11 @@ export const AlsoScreeningContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2.5rem;
+
+  .icon {
+    flex: 1;
+  }
 `;
 
 export const ScreeningImgWrapper = styled.div`
@@ -30,10 +35,14 @@ export const ScreeningContainer = styled.div`
   align-items: center;
   gap: 0.8rem;
 
-  h3 {
-    font-size: ${FONTSIZES.base};
-    font-weight: ${FONTWEIGHTS.medium};
-    color: ${COLORS.white};
-    margin-bottom: 0.5rem;
+  .details {
+    width: 12rem;
+
+    h3 {
+      font-size: ${FONTSIZES.small};
+      font-weight: ${FONTWEIGHTS.medium};
+      color: ${COLORS.white};
+      margin-bottom: 0.5rem;
+    }
   }
 `;

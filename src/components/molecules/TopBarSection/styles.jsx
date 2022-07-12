@@ -13,7 +13,7 @@ export const TopBarWrapper = styled.div`
   }
 
   .topbar-input {
-    width: 27.9rem;
+    /* width: 27.9rem; */
     height: 4.7rem;
     border-radius: 1.8rem;
     padding-left: 4rem;
@@ -46,4 +46,12 @@ export const TopBarImg = styled.img`
   object-fit: cover;
   border-radius: 50%;
   background-position: left;
+`;
+
+export const MovieDB = styled.img`
+  width: 4rem;
+  position: absolute;
+  top: 20rem;
+  right: 2rem;
+  opacity: 0.2;
 `;
