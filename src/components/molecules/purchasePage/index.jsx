@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../atoms/button/Button';
-import Input from '../../atoms/Input/Input';
+// import Input from '../../atoms/Input/Input';
 import MovieLayout from '../../layout/movieLayout';
 import SelectDropDown from '../selectDropDown';
 
@@ -30,6 +30,20 @@ function PurchasePage() {
     { value: 'Surulere Mall', label: 'Lesiure Mall' },
     { value: 'Ikotun', label: 'Ikotun Mall' },
     { value: 'Festac Mall', label: 'Festac Mall' },
+  ];
+
+  const timeOption = [
+    { value: '2:25pm', label: '2:25pm' },
+    { value: '4:15pm', label: '4:15pm' },
+    { value: '6:45pm', label: '6:45pm' },
+    { value: '7:10pm', label: '7:10pm' },
+  ];
+
+  const dayOption = [
+    { value: 'Thursday', label: 'Thur 17/08' },
+    { value: 'Tuesday', label: 'Tue 15/08' },
+    { value: 'Saturday', label: 'Sat 19/08' },
+    { value: 'Sun', label: 'Sun 20/08' },
   ];
 
   const list = Array.from({ length: 20 }, (_, i) => i + 1);
@@ -66,7 +80,7 @@ function PurchasePage() {
           />
         </PurchaseDropdown>
         <PurchaseDropdown>
-          <Input
+          {/* <Input
             type="date"
             className="purchase-input"
             id="date"
@@ -74,10 +88,19 @@ function PurchasePage() {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.date}
+          /> */}
+          <SelectDropDown
+            options={dayOption}
+            placeholder=" Date"
+            id="date"
+            name="date"
+            value={formik.values.location}
+            onChange={(value) => formik.setFieldValue('date', value.value)}
+            onBlur={formik.handleBlur}
           />
         </PurchaseDropdown>
         <PurchaseDropdown>
-          <Input
+          {/* <Input
             type="time"
             className="purchase-input"
             id="time"
@@ -85,7 +108,17 @@ function PurchasePage() {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.time}
+          /> */}
+          <SelectDropDown
+            options={timeOption}
+            placeholder=" Time"
+            id="time"
+            name="time"
+            value={formik.values.location}
+            onChange={(value) => formik.setFieldValue('time', value.value)}
+            onBlur={formik.handleBlur}
           />
+
           <SelectDropDown
             options={ticketOptions}
             placeholder=" Tickets"

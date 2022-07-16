@@ -4,7 +4,8 @@ import axios from 'axios';
 const initialState = {
   isLoading: false,
   nowPlaying: [],
-  popular: [],
+  topRated: [],
+  tvSeries: [],
 };
 
 // const baseURL: process.env.REACT_APP_BASE_URL
@@ -26,11 +27,23 @@ export const playingMovie = createAsyncThunk(
   }
 );
 
-export const popularMovie = createAsyncThunk('home/moviesPlaying', async () => {
+export const topMovie = createAsyncThunk('home/popularMovies', async () => {
   try {
     const response = await axios({
       method: 'get',
-      url: 'https://api.themoviedb.org/3/movie/popular?api_key=db1c6812d2a608d24bafbc337b36b53c',
+      url: 'https://api.themoviedb.org/3/movie/top_rated?api_key=db1c6812d2a608d24bafbc337b36b53c&language=en-US&page=1',
+    });
+    return response?.data?.results;
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+export const getTvSeries = createAsyncThunk('home/tvSeries', async () => {
+  try {
+    const response = await axios({
+      method: 'get',
+      url: 'https://api.themoviedb.org/3/tv/popular?api_key=db1c6812d2a608d24bafbc337b36b53c&language=en-US&page=1',
     });
     return response?.data?.results;
   } catch (error) {
@@ -66,11 +79,23 @@ export const homeSlice = createSlice({
     [playingMovie.rejected]: (state) => {
       state.isLoading = false;
     },
-    [popularMovie.fulfilled]: (state, action) => {
+    [topMovie.fulfilled]: (state, action) => {
       state.isLoading = false;
-      state.popular = action.payload;
+      state.topRated = action.payload;
     },
-    [popularMovie.rejected]: (state) => {
+    [topMovie.rejected]: (state) => {
+      state.isLoading = false;
+    },
+
+    [searchMovie.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.nowPlaying = action.payload;
+    },
+    [getTvSeries.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.tvSeries = action.payload;
+    },
+    [getTvSeries.rejected]: (state) => {
       state.isLoading = false;
     },
   },

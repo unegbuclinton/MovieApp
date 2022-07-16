@@ -11,10 +11,10 @@ import {
 
 function AlsoScreening() {
   const API_IMG = 'https://image.tmdb.org/t/p/w200/';
-  const { popular } = useSelector((state) => state.home);
+  const { topRated } = useSelector((state) => state.home);
   return (
     <AlsoScreeningWrapper>
-      {popular?.map(({ poster_path, original_title, id }) => (
+      {topRated?.map(({ poster_path, original_title, id }) => (
         <AlsoScreeningContainer key={id}>
           <ScreeningContainer>
             <ScreeningImgWrapper>

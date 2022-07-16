@@ -1,9 +1,9 @@
-// import debounce from 'lodash.debounce';
-// import React, { useCallback, useEffect, useState } from 'react';
-// import { useDispatch } from 'react-redux';
+import debounce from 'lodash.debounce';
+import React, { useCallback, useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Input from '../../atoms/Input/Input';
-// import { popularMovie, searchMovie } from '../../features/Home/homeSlice';
+import { playingMovie, searchMovie } from '../../features/Home/homeSlice';
 import image from '../../gallery/img/myImg.JPG';
 
 import {
@@ -18,23 +18,23 @@ import {
 
 function TopBarComponent() {
   const navigate = useNavigate();
-  // const dispatch = useDispatch();
-  // const [input, setInput] = useState('');
+  const dispatch = useDispatch();
+  const [input, setInput] = useState('');
 
-  // const getSearchDebounce = useCallback(
-  //   debounce(() => {
-  //     if (input) {
-  //       dispatch(searchMovie(input));
-  //     } else {
-  //       dispatch(popularMovie());
-  //     }
-  //   }, 700),
-  //   [input]
-  // );
-  // useEffect(() => {
-  //   getSearchDebounce();
-  //   return getSearchDebounce.cancel;
-  // }, [input]);
+  const getSearchDebounce = useCallback(
+    debounce(() => {
+      if (input) {
+        dispatch(searchMovie(input));
+      } else {
+        dispatch(playingMovie());
+      }
+    }, 700),
+    [input]
+  );
+  useEffect(() => {
+    getSearchDebounce();
+    return getSearchDebounce.cancel;
+  }, [input]);
   return (
     <TopBarWrapper>
       <MovieDB
@@ -51,7 +51,7 @@ function TopBarComponent() {
       </TopBarInfo>
       <TopBarContainer>
         <Input
-          // onChange={(e) => setInput(e.target.value)}
+          onChange={(e) => setInput(e.target.value)}
           search
           className="topbar-input"
           containerClass="input-container"

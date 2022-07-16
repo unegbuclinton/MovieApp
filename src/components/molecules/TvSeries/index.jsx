@@ -3,25 +3,25 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getMovieById } from '../../features/Movie/MovieSlice';
 import {
-  HotMoviesCarousel,
-  HotMoviesContainer,
-  HotMoviesHeader,
-  HotMoviesText,
-  HotMoviesWrapper,
+  TvSeriesCarousel,
+  TvSeriesContainer,
+  TvSeriesHeader,
+  TvSeriesText,
+  TvSeriesWrapper,
 } from './styles';
 
-function HotMovies() {
+function TvSeries() {
   const navigate = useNavigate();
-  const { nowPlaying } = useSelector((state) => state.home);
+  const { tvSeries } = useSelector((state) => state.home);
+
   const API_IMG = 'https://image.tmdb.org/t/p/w300/';
   const dispatch = useDispatch();
-
   return (
-    <HotMoviesContainer>
-      <HotMoviesHeader>Screening Movies</HotMoviesHeader>
-      <HotMoviesWrapper>
-        <HotMoviesCarousel>
-          {nowPlaying?.map((current) => (
+    <TvSeriesContainer>
+      <TvSeriesHeader>TV Series for stream</TvSeriesHeader>
+      <TvSeriesWrapper>
+        <TvSeriesCarousel>
+          {tvSeries?.map((current) => (
             <div key={current.id}>
               <div className="carousel-item">
                 <img
@@ -30,18 +30,18 @@ function HotMovies() {
                   className="carousel-item__img"
                   onClick={() => {
                     dispatch(getMovieById(current.id)).then(() =>
-                      navigate('/movie')
+                      navigate('/')
                     );
                   }}
                 />
               </div>
-              <HotMoviesText>{current.original_title}</HotMoviesText>
+              <TvSeriesText>{current.name}</TvSeriesText>
             </div>
           ))}
-        </HotMoviesCarousel>
-      </HotMoviesWrapper>
-    </HotMoviesContainer>
+        </TvSeriesCarousel>
+      </TvSeriesWrapper>
+    </TvSeriesContainer>
   );
 }
 
-export default HotMovies;
+export default TvSeries;
