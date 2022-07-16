@@ -87,6 +87,7 @@ export const PaymentImage = styled.img`
 export const PaymentCTA = styled.div`
   display: flex;
   justify-content: center;
+
   .payment-btn {
     width: 27.7rem;
     height: 5rem;
@@ -95,9 +96,92 @@ export const PaymentCTA = styled.div`
     font-size: ${FONTSIZES.lg};
     color: ${COLORS.white};
     font-weight: ${FONTWEIGHTS.bold};
+    margin-bottom: 1rem;
   }
 `;
 
 export const TransferBox = styled.div``;
 
-export const CardBox = styled.div``;
+export const CardBox = styled.div`
+  position: absolute;
+  bottom: ${({ showCards }) => (showCards ? '0' : '100%')};
+  width: 100%;
+  height: 33.2rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  background: ${COLORS['xiketic-200']};
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  transition: bottom 0.4s ease-in;
+
+  .handle-box {
+    display: flex;
+    justify-content: center;
+
+    .handle {
+      width: 10.1rem;
+      height: 0.537rem;
+      border-radius: 0.3rem;
+      background-color: ${COLORS.white};
+      margin-top: 0.859rem;
+    }
+  }
+
+  h1 {
+    color: ${COLORS.white};
+    font-size: ${FONTSIZES.xlarge};
+    margin-top: 2.6rem;
+    margin-bottom: 3.3rem;
+  }
+
+  .added-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    background-color: ${COLORS.xiketic};
+    padding: 1.4rem;
+    border-radius: 1.3rem;
+    margin-bottom: 2.2rem;
+
+    p {
+      color: ${COLORS.white};
+      font-size: ${FONTSIZES.small};
+    }
+  }
+
+  .active {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    background-color: ${COLORS.xiketic};
+    padding: 1.4rem;
+    border-radius: 1.3rem;
+    margin-bottom: 2.2rem;
+
+    p {
+      color: ${COLORS.white};
+      font-size: ${FONTSIZES.small};
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      bottom: 20px;
+      right: 10px;
+      background-color: ${COLORS.amethyst};
+      border-radius: 50%;
+    }
+  }
+
+  .price {
+    position: absolute;
+    right: 24px;
+    font-size: ${FONTSIZES.xlarge};
+    font-weight: ${FONTWEIGHTS.bold};
+    color: ${COLORS.white};
+  }
+`;
