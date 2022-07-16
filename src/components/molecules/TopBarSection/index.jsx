@@ -1,5 +1,5 @@
 import debounce from 'lodash.debounce';
-import React, { useCallback, useEffect, useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Input from '../../atoms/Input/Input';
@@ -19,22 +19,16 @@ import {
 function TopBarComponent() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [input, setInput] = useState('');
 
-  const getSearchDebounce = useCallback(
-    debounce(() => {
-      if (input) {
-        dispatch(searchMovie(input));
-      } else {
-        dispatch(playingMovie());
-      }
-    }, 700),
-    [input]
-  );
-  useEffect(() => {
-    getSearchDebounce();
-    return getSearchDebounce.cancel;
-  }, [input]);
+  const getSearchDebounce = debounce((input) => {
+    if (input) {
+      dispatch(searchMovie(input));
+    } else {
+      console.log('Welcomeeeee');
+      dispatch(playingMovie());
+    }
+  }, 700);
+
   return (
     <TopBarWrapper>
       <MovieDB
@@ -51,11 +45,11 @@ function TopBarComponent() {
       </TopBarInfo>
       <TopBarContainer>
         <Input
-          onChange={(e) => setInput(e.target.value)}
+          onChange={(e) => getSearchDebounce(e.target.value)}
           search
           className="topbar-input"
           containerClass="input-container"
-          placeholder="search"
+          placeholder="Search"
         />
       </TopBarContainer>
     </TopBarWrapper>
