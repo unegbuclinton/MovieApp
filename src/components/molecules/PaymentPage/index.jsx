@@ -41,7 +41,6 @@ function PaymentPage() {
   }, [showCards]);
 
   const { state } = useLocation();
-
   const [activeCard, setActiveCard] = useState(1);
   const purchaseData = state?.purchase_details.values;
   const { location, date, time, ticket } = purchaseData;
@@ -94,32 +93,6 @@ function PaymentPage() {
             </Button>
           </div>
         )}
-        {/* {paymentMethod?.map(({ card }, idx) => {
-          var lastFourDigits = card.substr(card.length - 4);
-
-          !!paymentMethod?.length ? (
-            <div key={idx}>
-              <p className="no-card__header">No Card Added </p>
-              <Button
-                onClick={() => navigate('/payment-edit')}
-                className="add-card__btn"
-              >
-                Add Card
-              </Button>
-            </div>
-          ) : (
-            <div
-              className={`added-card ${activeCard === idx ? 'active' : ''}  `}
-              key={idx}
-              onClick={() => setActiveCard(idx)}
-            >
-              <div>
-                <DPIconCardIcon />
-              </div>
-              <p>**** **** **** {lastFourDigits}</p>
-            </div>
-          );
-        })} */}
 
         <PaymentCTA>
           <Button onClick={next} className="payment-btn">

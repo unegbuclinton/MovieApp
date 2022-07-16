@@ -14,12 +14,11 @@ function SelectDropDown({
     return options ? options.find((option) => option.value === myValue) : '';
   };
   const customStyles = {
-    control: (styles) => ({
+    control: (styles, state) => ({
       ...styles,
-      backgroundColor: '#171622',
+      // backgroundColor: '#171622',
       fontSize: '1.4rem',
       outline: 'none',
-      color: '#ffff',
       border: 'none',
       outerHeight: '4.6rem',
     }),
@@ -42,4 +41,8 @@ export default SelectDropDown;
 
 const ReactSelect = styled(Select)`
   width: 100%;
+
+  .react-select__option {
+    color: #fff;
+  }
 `;
