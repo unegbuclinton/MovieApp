@@ -3,6 +3,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import BasicInformation from './components/molecules/BasicInfo';
 import FavouriteScreen from './components/molecules/favourite';
+import HotNews from './components/molecules/HotNews';
 import Language from './components/molecules/Language';
 import MoviePage from './components/molecules/MoviePage/index';
 import PaymenttEdit from './components/molecules/PaymenEdit';
@@ -30,6 +31,7 @@ function App() {
           <Route path="reciept" element={<PaymentReciept />} />
           <Route path="favourite" element={<FavouriteScreen />} />
           <Route path="language" element={<Language />} />
+          <Route path="hot-news" element={<HotNews />} />
 
           <Route
             path="*"

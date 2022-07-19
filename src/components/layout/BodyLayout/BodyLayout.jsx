@@ -18,7 +18,7 @@ function BodyLayout({ children }) {
         <Link className="nav-menu__links" to="favourite">
           Favourites
         </Link>
-        <Link className="nav-menu__links" to="/">
+        <Link className="nav-menu__links" to="/hot-news">
           Hot News
         </Link>
       </div>
