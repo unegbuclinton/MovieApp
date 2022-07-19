@@ -1,5 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import BasicInformation from './components/molecules/BasicInfo';
+import FavouriteScreen from './components/molecules/favourite';
 import Language from './components/molecules/Language';
 import MoviePage from './components/molecules/MoviePage/index';
 import PaymenttEdit from './components/molecules/PaymenEdit';
@@ -14,6 +17,7 @@ function App() {
   return (
     <>
       <Router>
+        <ToastContainer autoClose={500} draggable pauseOnHover={false} />
         <Routes>
           <Route index element={<HomePage />} />
           <Route path="profile" element={<ProfilePage />}></Route>
@@ -24,6 +28,7 @@ function App() {
           <Route path="purchase" element={<PurchasePage />} />
           <Route path="payment" element={<PaymentPage />} Route />
           <Route path="reciept" element={<PaymentReciept />} />
+          <Route path="favourite" element={<FavouriteScreen />} />
           <Route path="language" element={<Language />} />
 
           <Route

@@ -1,6 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { DPIconBookMark, DPIconRating } from '../../gallery/icons';
+import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
+import { addToFavorite } from '../../features/redux/favorite';
+import { DPIconFavourite, DPIconRating } from '../../gallery/icons';
 import {
   AlsoScreeningContainer,
   AlsoScreeningWrapper,
@@ -10,23 +12,31 @@ import {
 } from './styles';
 
 function AlsoScreening() {
+  const dispatch = useDispatch();
   const API_IMG = 'https://image.tmdb.org/t/p/w200/';
   const { topRated } = useSelector((state) => state.home);
+  const notify = () => toast('added to favourite');
   return (
     <AlsoScreeningWrapper>
-      {topRated?.map(({ poster_path, original_title, id }) => (
-        <AlsoScreeningContainer key={id}>
+      {topRated?.map((current) => (
+        <AlsoScreeningContainer key={current.id}>
           <ScreeningContainer>
             <ScreeningImgWrapper>
-              <ScreeningImg src={`${API_IMG}${poster_path}`} />
+              <ScreeningImg src={`${API_IMG}${current.poster_path}`} />
             </ScreeningImgWrapper>
             <div className="details">
-              <h3>{original_title}</h3>
+              <h3>{current.original_title}</h3>
               <DPIconRating />
             </div>
           </ScreeningContainer>
 
-          <DPIconBookMark className="icon" />
+          <DPIconFavourite
+            className="icon"
+            onClick={() => {
+              dispatch(addToFavorite(current));
+              notify();
+            }}
+          />
         </AlsoScreeningContainer>
       ))}
     </AlsoScreeningWrapper>

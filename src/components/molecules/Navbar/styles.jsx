@@ -38,28 +38,25 @@ export const NavbarContainer = styled.div`
   }
 
   .isActive {
-    .links {
-      text-decoration: none;
-      position: relative;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    border-bottom: 1px solid ${COLORS.xiketic};
+    span {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      gap: 0.6rem;
-      border-bottom: 1px solid ${COLORS.xiketic};
-
-      span {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 2rem;
-        height: 2rem;
-        background-color: red;
-        border-radius: 50%;
-        position: absolute;
-        top: -0.4rem;
-        right: 0.5rem;
-        color: ${COLORS.white};
-      }
+      width: 2rem;
+      height: 2rem;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+      top: -0.4rem;
+      right: 0.5rem;
+      color: ${COLORS.white};
     }
   }
 `;
