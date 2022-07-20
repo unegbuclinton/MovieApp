@@ -28,7 +28,7 @@ export const ComingSoonText = styled.p`
 
 export const ComingSoonImg = styled.img`
   width: 100%;
-  max-width: 25.3rem;
+
   height: 15.1rem;
   border-radius: 0.8rem;
   object-fit: cover;

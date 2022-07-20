@@ -15,7 +15,7 @@ function BodyLayout({ children }) {
         <Link className="nav-menu__links" to="/">
           Cinema Card
         </Link>
-        <Link className="nav-menu__links" to="favourite">
+        <Link className="nav-menu__links" to="/favourite">
           Favourites
         </Link>
         <Link className="nav-menu__links" to="/hot-news">
