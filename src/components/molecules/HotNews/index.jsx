@@ -50,12 +50,20 @@ const HotNewsWrapper = styled.div`
     top: -40px;
     left: 12px;
   }
+
+  @media screen and (min-width: 992px) {
+    max-width: 85%;
+    margin: 0 auto;
+  }
 `;
 const HotNewsHeader = styled.h1`
   font-size: ${FONTSIZES.xlarge};
   font-weight: ${FONTWEIGHTS.bold};
   color: ${COLORS.white};
   margin-bottom: 3.2rem;
+  @media screen and (min-width: 992px) {
+    font-size: ${FONTSIZES.xxlarge};
+  }
 `;
 const HotNewsContainer = styled.div`
   div {
@@ -80,12 +88,19 @@ const HotNewsImg = styled.img`
   height: 16.6rem;
   object-fit: cover;
   border-radius: 0.5rem;
+
+  @media screen and (min-width: 992px) {
+    height: 50.1rem;
+  }
 `;
 const HotNewsHeadLine = styled.h2`
   font-size: ${FONTSIZES.base};
   font-weight: ${FONTWEIGHTS.medium};
   color: ${COLORS.white};
   margin-top: 2rem;
+  @media screen and (min-width: 992px) {
+    font-size: ${FONTSIZES.lg};
+  }
 `;
 const HotNewsDesc = styled.p`
   font-size: ${FONTSIZES.xsmall};
@@ -93,4 +108,8 @@ const HotNewsDesc = styled.p`
   color: ${COLORS.white};
   margin-top: 0.7rem;
   word-break: break-all;
+
+  @media screen and (min-width: 992px) {
+    font-size: ${FONTSIZES.base};
+  }
 `;
