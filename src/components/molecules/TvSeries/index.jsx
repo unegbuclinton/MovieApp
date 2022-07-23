@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getMovieById } from '../../features/Movie/MovieSlice';
+import Modal from '../../layout/modal';
 import {
   TvSeriesCarousel,
   TvSeriesContainer,
@@ -11,6 +12,7 @@ import {
 } from './styles';
 
 function TvSeries() {
+  const [show, setShow] = useState(false);
   const navigate = useNavigate();
   const { tvSeries } = useSelector((state) => state.home);
 
@@ -32,14 +34,21 @@ function TvSeries() {
                     dispatch(getMovieById(current.id)).then(() =>
                       navigate('/')
                     );
+                    setShow(true);
                   }}
                 />
               </div>
+
               <TvSeriesText>{current.name}</TvSeriesText>
             </div>
           ))}
         </TvSeriesCarousel>
       </TvSeriesWrapper>
+      <Modal
+        text="This Service is currently not avialable now"
+        show={show}
+        hide={() => setShow(false)}
+      />
     </TvSeriesContainer>
   );
 }
