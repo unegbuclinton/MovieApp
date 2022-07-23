@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { COLORS } from '../../../constatnts/colors';
 import { FONTSIZES, FONTWEIGHTS } from '../../../constatnts/font-size';
@@ -27,7 +27,7 @@ function HotNews() {
             className="link-to"
             href="https://github.com"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer noopener"
             aria-label="Github"
           >
             Read More ...

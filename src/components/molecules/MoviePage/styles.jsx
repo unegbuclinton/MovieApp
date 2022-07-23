@@ -57,7 +57,7 @@ export const MoviePageHeader = styled.h1`
 export const MoviePageText = styled.p`
   color: ${COLORS.white};
   line-height: 1.8rem;
-  max-width: 25rem;
+  max-width: 90%;
   font-size: ${FONTSIZES.small};
   font-weight: ${FONTWEIGHTS.normal};
 
