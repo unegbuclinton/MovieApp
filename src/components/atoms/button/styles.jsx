@@ -5,4 +5,5 @@ export const ButtonWrapper = styled.button`
   outline: none;
   border: none;
   color: ${COLORS.white};
+  cursor: pointer;
 `;

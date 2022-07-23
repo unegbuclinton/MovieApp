@@ -4,6 +4,15 @@ import { FONTSIZES, FONTWEIGHTS } from '../../../constatnts/font-size';
 
 export const AlsoScreeningWrapper = styled.div`
   margin-bottom: 2rem;
+
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1100px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;
 
 export const AlsoScreeningContainer = styled.div`
@@ -12,8 +21,9 @@ export const AlsoScreeningContainer = styled.div`
   align-items: center;
   margin-bottom: 2.5rem;
 
-  .icon {
+  .icon-container {
     flex: 1;
+    margin-right: 1rem;
   }
 `;
 

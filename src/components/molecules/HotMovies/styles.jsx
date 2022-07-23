@@ -5,7 +5,7 @@ import { FONTSIZES, FONTWEIGHTS } from '../../../constatnts/font-size';
 export const HotMoviesContainer = styled.div``;
 
 export const HotMoviesWrapper = styled.div`
-  max-width: 50rem;
+  max-width: 100%;
   display: flex;
 `;
 
@@ -50,10 +50,3 @@ export const HotMoviesText = styled.h1`
   margin-left: 1.8rem;
   margin-top: 0.8rem;
 `;
-// export const HotMoviesParagraph = styled.p`
-//   color: ${COLORS.white};
-//   font-size: ${FONTSIZES.xsmall};
-//   font-weight: ${FONTWEIGHTS.medium};
-//   margin-left: 0.8rem;
-//   margin-top: 0.8rem;
-// `;

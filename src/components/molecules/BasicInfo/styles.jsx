@@ -10,6 +10,11 @@ export const InfoWrapper = styled.div`
     position: absolute;
     top: 25px;
   }
+
+  @media only screen and (min-width: 768px) {
+    max-width: 70%;
+    margin: 0 auto;
+  }
 `;
 
 export const InfoImg = styled.img`
@@ -57,5 +62,11 @@ export const InfoForm = styled.form`
     font-size: 1.5rem;
     font-weight: ${FONTWEIGHTS.bold};
     margin-top: 4rem;
+
+    @media only screen and (min-width: 768px) {
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+    }
   }
 `;

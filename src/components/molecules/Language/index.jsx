@@ -24,6 +24,7 @@ function Language() {
 export default Language;
 
 const LanguageWrapper = styled.div`
+  max-width: 50rem;
   padding: 1.8rem;
 `;
 

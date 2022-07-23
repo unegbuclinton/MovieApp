@@ -84,6 +84,10 @@ const FavouriteContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  @media screen and (min-width: 992px) {
+    max-width: 70%;
+    margin: 0 auto;
+  }
 `;
 const EmptyState = styled.div`
   display: flex;

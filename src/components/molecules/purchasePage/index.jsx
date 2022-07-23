@@ -27,7 +27,7 @@ function PurchasePage() {
 
   const locationOption = [
     { value: 'Ikeja', label: 'Ikeja City Mall' },
-    { value: 'Surulere Mall', label: 'Lesiure Mall' },
+    { value: 'Surulere Mall', label: 'Surulere Mall' },
     { value: 'Ikotun', label: 'Ikotun Mall' },
     { value: 'Festac Mall', label: 'Festac Mall' },
   ];
@@ -80,15 +80,6 @@ function PurchasePage() {
           />
         </PurchaseDropdown>
         <PurchaseDropdown>
-          {/* <Input
-            type="date"
-            className="purchase-input"
-            id="date"
-            name="date"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.date}
-          /> */}
           <SelectDropDown
             options={dayOption}
             placeholder=" Date"
@@ -100,15 +91,6 @@ function PurchasePage() {
           />
         </PurchaseDropdown>
         <PurchaseDropdown>
-          {/* <Input
-            type="time"
-            className="purchase-input"
-            id="time"
-            name="time"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.time}
-          /> */}
           <SelectDropDown
             options={timeOption}
             placeholder=" Time"

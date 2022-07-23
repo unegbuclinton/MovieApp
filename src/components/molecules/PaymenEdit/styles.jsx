@@ -3,6 +3,7 @@ import { COLORS } from '../../../constatnts/colors';
 import { FONTSIZES, FONTWEIGHTS } from '../../../constatnts/font-size';
 
 export const PaymentEditWrapper = styled.div`
+  max-width: 50rem;
   padding: 1.8rem;
   position: relative;
 

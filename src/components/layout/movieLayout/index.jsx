@@ -56,6 +56,13 @@ const MoviePageWrapper = styled.div`
       outline: none;
     }
   }
+
+  @media only screen and (min-width: 768px) {
+    max-width: 75%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    height: 51rem;
+  }
 `;
 
 const MoviePageContainer = styled.div`
@@ -122,5 +129,9 @@ const MoviePageDisplay = styled.div`
     font-size: ${FONTSIZES.xsmall};
     font-weight: ${FONTWEIGHTS.medium};
     color: ${COLORS.white};
+  }
+
+  @media only screen and (min-width: 768px) {
+    height: 51rem;
   }
 `;

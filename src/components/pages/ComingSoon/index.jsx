@@ -1,5 +1,4 @@
 import React from 'react';
-import { DPIconInfoICon } from '../../gallery/icons';
 import strange from '../../gallery/img/strange.jpg';
 import img from '../../gallery/img/tenet.jpg';
 import uncharted from '../../gallery/img/uncharted.jpg';
@@ -53,11 +52,11 @@ function ComingSoonPage() {
               <ComingSoonImg src={img} alt="coming-movie" />
             </ComingSoonContainer>
             <ComingSoonInfo>
-              <p className="description">Coming Soon </p>
+              {/* <p className="description">Coming Soon </p>
               <div>
                 <DPIconInfoICon />
                 <p className="details">More Info</p>
-              </div>
+              </div> */}
             </ComingSoonInfo>
             <ComingSoonDescription>
               <h2>{title}</h2>

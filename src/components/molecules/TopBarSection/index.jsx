@@ -1,9 +1,10 @@
 import debounce from 'lodash.debounce';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Input from '../../atoms/Input/Input';
 import { playingMovie, searchMovie } from '../../features/Home/homeSlice';
+import { DPIconDown } from '../../gallery/icons';
 import image from '../../gallery/img/myImg.JPG';
 
 import {
@@ -11,12 +12,17 @@ import {
   TopBarContainer,
   TopBarImg,
   TopBarInfo,
+  TopBarItem,
   TopBarSpan,
   TopBarText,
   TopBarWrapper,
 } from './styles';
 
 function TopBarComponent() {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 992);
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -29,6 +35,14 @@ function TopBarComponent() {
     }
   }, 700);
 
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 992);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', updateMedia);
+    return () => window.removeEventListener('resize', updateMedia);
+  });
   return (
     <TopBarWrapper>
       <MovieDB
@@ -41,7 +55,12 @@ function TopBarComponent() {
         <TopBarText>
           Hello <TopBarSpan>unegbu</TopBarSpan>
         </TopBarText>
-        <TopBarImg src={image} onClick={() => navigate('/profile')} />
+        <div className="profile-container">
+          <TopBarImg src={image} onClick={() => navigate('/profile')} />
+          {isDesktop && (
+            <DPIconDown onClick={() => setShowMenu((prev) => !prev)} />
+          )}
+        </div>
       </TopBarInfo>
       <TopBarContainer>
         <Input
@@ -52,6 +71,23 @@ function TopBarComponent() {
           placeholder="Search"
         />
       </TopBarContainer>
+      {showMenu && (
+        <TopBarItem>
+          <Link
+            className="menu__links"
+            to="/"
+            onClick={() => setShowMenu(false)}
+          >
+            Cinema Card
+          </Link>
+          <Link className="menu__links" to="/favourite">
+            Favourites
+          </Link>
+          <Link className="menu__links" to="/hot-news">
+            Hot News
+          </Link>
+        </TopBarItem>
+      )}
     </TopBarWrapper>
   );
 }

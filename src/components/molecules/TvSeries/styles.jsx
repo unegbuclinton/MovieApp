@@ -5,7 +5,7 @@ import { FONTSIZES, FONTWEIGHTS } from '../../../constatnts/font-size';
 export const TvSeriesContainer = styled.div``;
 
 export const TvSeriesWrapper = styled.div`
-  max-width: 50rem;
+  max-width: 100%;
   display: flex;
 `;
 

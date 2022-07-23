@@ -44,11 +44,9 @@ function TvSeries() {
           ))}
         </TvSeriesCarousel>
       </TvSeriesWrapper>
-      <Modal
-        text="This Service is currently not avialable now"
-        show={show}
-        hide={() => setShow(false)}
-      />
+      <Modal show={show} hide={() => setShow(false)}>
+        <p>This Service is currently not avialable now</p>
+      </Modal>
     </TvSeriesContainer>
   );
 }

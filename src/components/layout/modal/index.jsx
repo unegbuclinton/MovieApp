@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import { COLORS } from '../../../constatnts/colors';
 import { FONTSIZES, FONTWEIGHTS } from '../../../constatnts/font-size';
 
-function Modal({ text, show, hide }) {
+function Modal({ children, show, hide }) {
   if (!show) {
     return null;
   }
   return (
     <ModalWrapper onClick={hide}>
-      <ModalContent>{text}</ModalContent>
+      <ModalContent>{children}</ModalContent>
     </ModalWrapper>
   );
 }

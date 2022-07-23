@@ -43,6 +43,11 @@ export const MoviePageContainer = styled.div`
   .header {
     margin-bottom: 0.9rem;
   }
+
+  @media only screen and (min-width: 768px) {
+    max-width: 75%;
+    /* margin: 0 auto; */
+  }
 `;
 
 export const MoviePageHeader = styled.h1`
@@ -55,4 +60,8 @@ export const MoviePageText = styled.p`
   max-width: 25rem;
   font-size: ${FONTSIZES.small};
   font-weight: ${FONTWEIGHTS.normal};
+
+  @media only screen and (min-width: 768px) {
+    max-width: 100%;
+  }
 `;

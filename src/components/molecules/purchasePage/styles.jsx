@@ -4,6 +4,11 @@ import { FONTSIZES, FONTWEIGHTS } from '../../../constatnts/font-size';
 
 export const PurchaseWrapper = styled.form`
   padding: 1.8rem;
+
+  @media only screen and (min-width: 768px) {
+    max-width: 75%;
+    margin: 0 auto;
+  }
 `;
 
 export const PurchaseDropdown = styled.div`

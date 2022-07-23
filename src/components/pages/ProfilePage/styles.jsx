@@ -41,6 +41,11 @@ export const ProfileText = styled.p`
 export const ProfileContainer = styled.div`
   margin-top: 4rem;
   padding: 1.1rem;
+
+  @media only screen and (min-width: 768px) {
+    max-width: 70%;
+    margin: 0 auto;
+  }
 `;
 
 export const ProfileItem = styled.div`

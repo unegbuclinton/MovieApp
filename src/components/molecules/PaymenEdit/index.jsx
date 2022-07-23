@@ -122,7 +122,7 @@ function PaymenttEdit() {
           onClick={() => setAddCard((prev) => !prev)}
           className="add-card__btn"
         >
-          Add Card
+          {addCard ? 'Cancel' : 'Add Card'}
         </Button>
       </PaymentEditContainer>
     </PaymentEditWrapper>

@@ -30,13 +30,15 @@ function AlsoScreening() {
             </div>
           </ScreeningContainer>
 
-          <DPIconFavourite
-            className="icon"
+          <div
+            className="icon-container"
             onClick={() => {
               dispatch(addToFavorite(current));
               notify();
             }}
-          />
+          >
+            <DPIconFavourite />
+          </div>
         </AlsoScreeningContainer>
       ))}
     </AlsoScreeningWrapper>
