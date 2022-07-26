@@ -72,10 +72,17 @@ export const PaymentDescription = styled.div`
     font-size: ${FONTSIZES.small};
     margin: 2rem 0;
   }
-  .genre {
-    color: ${COLORS.white};
-    font-size: ${FONTSIZES.base};
-    margin-left: 0.3rem;
+
+  .genre-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+
+    .genre {
+      color: ${COLORS.white};
+      font-size: ${FONTSIZES.base};
+      margin-left: 0.3rem;
+    }
   }
 
   .location {

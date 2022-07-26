@@ -184,11 +184,13 @@ function PaymentPage() {
           <PaymentImage src={movieImg} alt="booked movie" />
           <PaymentDescription>
             <h1 className="title">{original_title}</h1>
-            {genres?.map(({ name }, idx) => (
-              <span className="genre" key={idx}>
-                {name}
-              </span>
-            ))}
+            <div className="genre-box">
+              {genres?.map(({ name }, idx) => (
+                <span className="genre" key={idx}>
+                  {name}
+                </span>
+              ))}
+            </div>
             <div className="location">
               <span>
                 <DPIconLocation />
