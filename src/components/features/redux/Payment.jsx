@@ -4,13 +4,14 @@ export const paymentSlice = createSlice({
   name: 'paymentData',
   initialState: {
     paymentMethod: [
-      {
-        id: '1',
-        name: 'Sandra Williams',
-        card: '5525544477844451',
-        expiry: '08/2021',
-        cvc: '556',
-      },
+      // {
+      //   id: '1',
+      //   name: 'Sandra Williams',
+      //   card: '5525544477844451',
+      //   expiry: '08/2021',
+      //   cvc: '556',
+      // },
+      {},
     ],
   },
   reducers: {
