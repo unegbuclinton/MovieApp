@@ -130,7 +130,7 @@ function PaymentPage() {
 
           {!!paymentMethod.length ? (
             paymentMethod?.map(({ card }, idx) => {
-              let lastFourDigits = card?.substr(card.length - 4);
+              let lastFourDigits = card.substr(card.length - 4);
               return (
                 <div
                   className={`added-card ${
