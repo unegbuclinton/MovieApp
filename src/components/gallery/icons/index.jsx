@@ -30,4 +30,5 @@ export { ReactComponent as DPIconRating } from '../icons/rating.svg';
 export { ReactComponent as DPIconSearch } from '../icons/search.svg';
 export { ReactComponent as DPIconShare } from '../icons/share.svg';
 export { ReactComponent as DPIconSpinner } from '../icons/spin.svg';
+export { ReactComponent as DPIconLoading } from '../icons/spinner.svg';
 export { ReactComponent as DPIconTransfer } from '../icons/transfer.svg';
