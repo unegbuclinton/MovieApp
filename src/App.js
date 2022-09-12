@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,14 +13,10 @@ import PaymentReciept from './components/molecules/PaymentReciept';
 import PurchasePage from './components/molecules/purchasePage';
 // import ComingSoonPage from './components/pages/ComingSoon';
 import HomePage from './components/pages/HomePage';
+import LazyProfilePage from './components/pages/ProfilePage';
 // import ProfilePage from './components/pages/ProfilePage';
 
-const LazyComingSoon = React.lazy(() =>
-  import('./components/pages/ComingSoon')
-);
-const LazyProfilePage = React.lazy(() =>
-  import('./components/pages/ProfilePage')
-);
+import LazyComingSoon from './components/pages/ComingSoon';
 
 function App() {
   return (
@@ -29,25 +25,10 @@ function App() {
         <ToastContainer autoClose={500} draggable pauseOnHover={false} />
         <Routes>
           <Route index element={<HomePage />} />
-          <Route
-            path="profile"
-            element={
-              <Suspense fallback="loading.....">
-                <LazyProfilePage />
-              </Suspense>
-            }
-          ></Route>
+          <Route path="profile" element={<LazyProfilePage />}></Route>
           <Route path="info" element={<BasicInformation />} />
           <Route path="payment-edit" element={<PaymenttEdit />} />
-          <Route
-            path="coming-soon"
-            element={
-              <React.Suspense fallback="Loading .....">
-                <LazyComingSoon />
-              </React.Suspense>
-            }
-            Route
-          />
+          <Route path="coming-soon" element={<LazyComingSoon />} Route />
           <Route path="movie" element={<MoviePage />} Route />
           <Route path="purchase" element={<PurchasePage />} />
           <Route path="payment" element={<PaymentPage />} Route />

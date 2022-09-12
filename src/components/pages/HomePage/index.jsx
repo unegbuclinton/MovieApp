@@ -28,7 +28,7 @@ function HomePage() {
     dispatch(playingMovie());
     dispatch(topMovie());
     dispatch(getTvSeries());
-  });
+  }, [dispatch]);
 
   return (
     <BodyLayout>
