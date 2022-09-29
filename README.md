@@ -2,16 +2,17 @@
 
 # Table of Content
 
-- General Info
-- Technologies
-- Status
+- [General info](#general-info)
 
-### Introduction
+* [Technologies](#technologies)
+* [Status](status)
+
+## General info
 
 This is a react web application that enables user purchase movie tickets online.
 Enable user add payment add or remove payment card in the profile setting and edit basic infomations.
 
-### Technologies
+## Technologies
 
 Frontend technologies used in building this project include:
 
@@ -22,7 +23,7 @@ Frontend technologies used in building this project include:
 - React Router
 - Axios
 
-### Status
+## Status
 
 Version 1.
 This application is open for more updates.
