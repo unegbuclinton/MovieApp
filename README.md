@@ -2,9 +2,9 @@
 
 # Table of Content
 
-⋅⋅* General Info
-⋅⋅* Technologies
-⋅⋅\* Status
+- General Info
+- Technologies
+- Status
 
 ### Introduction
 
