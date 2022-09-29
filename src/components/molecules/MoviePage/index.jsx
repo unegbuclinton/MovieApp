@@ -10,7 +10,7 @@ function MoviePage() {
 
   const { release_date, overview, original_title, backdrop_path } = singleMovie;
   const navigate = useNavigate();
-  const API_IMG = 'https://image.tmdb.org/t/p/w400/';
+  const API_IMG = 'https://image.tmdb.org/t/p/w500/';
   const movieImg = `${API_IMG}${backdrop_path}`;
   const MoveNext = () => {
     navigate('/purchase');

@@ -153,7 +153,8 @@ export const TransferBox = styled.div``;
 
 export const CardBox = styled.div`
   position: absolute;
-  bottom: ${({ showCards }) => (showCards ? '0' : '100%')};
+  transform: ${({ showCards }) =>
+    showCards ? 'translateY(100%)' : 'translateY(-100%)'};
   width: 100%;
   height: 33.2rem;
   border-top-left-radius: 2rem;
@@ -161,7 +162,7 @@ export const CardBox = styled.div`
   background: ${COLORS['xiketic-200']};
   padding-left: 2.4rem;
   padding-right: 2.4rem;
-  transition: bottom 0.4s ease-in;
+  transition: transform 0.4s ease-in;
 
   .handle-box {
     display: flex;

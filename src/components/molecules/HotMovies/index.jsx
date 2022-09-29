@@ -13,7 +13,7 @@ import {
 function HotMovies() {
   const navigate = useNavigate();
   const { nowPlaying } = useSelector((state) => state.home);
-  const API_IMG = 'https://image.tmdb.org/t/p/w300/';
+  const API_IMG = 'https://image.tmdb.org/t/p/w500/';
   const dispatch = useDispatch();
 
   return (
