@@ -1,4 +1,4 @@
-[MovieBooz](https://www.google.com)
+[MovieBooz](https://movieboomz.netlify.app/)
 
 # Table of Content
 
