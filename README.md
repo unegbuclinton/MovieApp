@@ -1,4 +1,4 @@
-[MovieBooz](https://www.google.com)
+[MovieBooz](https://movieboomz.netlify.app/)
 
 # Table of Content
 
@@ -15,12 +15,12 @@ Enable user add payment add or remove payment card in the profile setting and ed
 
 Frontend technologies used in building this project include:
 
-⋅⋅* React
-⋅⋅* Redux toolkit
-⋅⋅* MovieDb for getting data
-⋅⋅* Styled components
-⋅⋅\* React Router
-⋅⋅\* Axios
+- React
+- Redux toolkit
+- MovieDb for getting data
+- Styled components
+- React Router
+- Axios
 
 ### Status
 
