@@ -4,8 +4,8 @@
 
 - [General info](#general-info)
 
-* [Technologies](#technologies)
-* [Status](status)
+- [Technologies](#technologies)
+- [Status](status)
 
 ## General info
 
